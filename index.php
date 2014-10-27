@@ -21,7 +21,9 @@
 <form method="post" action="index.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
       Email <input type="text" name="email" id="email"/></br>
+	  Company <input type="text" name="company" id="company"/></br>
       <input type="submit" name="submit" value="Submit" />
+	  
 </form>
 <?php
     // DB connection info
@@ -44,6 +46,7 @@
     try {
         $name = $_POST['name'];
         $email = $_POST['email'];
+		$company = $_POST['company'];
         $date = date("Y-m-d");
         // Insert data
         $sql_insert = "INSERT INTO registration_tbl (name, email, date) 
@@ -52,6 +55,7 @@
         $stmt->bindValue(1, $name);
         $stmt->bindValue(2, $email);
         $stmt->bindValue(3, $date);
+		$stmt->bindValue(4, $company);
         $stmt->execute();
     }
     catch(Exception $e) {
@@ -68,10 +72,12 @@
         echo "<table>";
         echo "<tr><th>Name</th>";
         echo "<th>Email</th>";
+		echo "<th>Company</th>";
         echo "<th>Date</th></tr>";
         foreach($registrants as $registrant) {
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
+			echo "<td>".$registrant['company']."</td></tr>";
             echo "<td>".$registrant['date']."</td></tr>";
         }
         echo "</table>";
