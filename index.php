@@ -49,7 +49,7 @@
 		$company = $_POST['company'];
         $date = date("Y-m-d");
         // Insert data
-        $sql_insert = "INSERT INTO registration_tbl (name, email, date) 
+        $sql_insert = "INSERT INTO registration_tbl (name, email, date, Company) 
                    VALUES (?,?,?)";
         $stmt = $conn->prepare($sql_insert);
         $stmt->bindValue(1, $name);
