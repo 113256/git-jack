@@ -49,13 +49,14 @@
 		$company = $_POST['company'];
         $date = date("Y-m-d");
         // Insert data
-        $sql_insert = "INSERT INTO registration_tbl (name, email, date, Company) 
+        $sql_insert = "INSERT INTO registration_tbl (Company, name, email, date) 
                    VALUES (?,?,?)";
         $stmt = $conn->prepare($sql_insert);
-        $stmt->bindValue(1, $name);
-        $stmt->bindValue(2, $email);
-        $stmt->bindValue(3, $date);
-		$stmt->bindValue(4, $company);
+		$stmt->bindValue(1, $company);
+        $stmt->bindValue(2, $name);
+        $stmt->bindValue(3, $email);
+        $stmt->bindValue(4, $date);
+		
         $stmt->execute();
     }
     catch(Exception $e) {
