@@ -73,12 +73,12 @@
         echo "<table>";
         echo "<tr><th>Name</th>";
         echo "<th>Email</th>";
-		echo "<th>Company</th>";
+		echo "<th>Company  </th>";
         echo "<th>Date</th></tr>";
         foreach($registrants as $registrant) {
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
-			echo "<td>".$registrant['company']."</td></tr>";
+			echo "<td>".$registrant['company']."</td>";
             echo "<td>".$registrant['date']."</td></tr>";
         }
         echo "</table>";
