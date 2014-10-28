@@ -24,14 +24,15 @@
 	  Company <input type="text" name="company" id="company"/></br>
       <input type="submit" name="submit" value="Submit" />
 	  </form>
-	  
+
+	  <a href= "search.php">search</a>
 	  <p>search/d</p>
-<form action = "search.php" method="get" >
+<!--<form action = "search.php" method="get" >
       Name  <input type="text" name="name" id=""/></br>
       Email <input type="text" name="email" id=""/></br>
 	  Company <input type="text" name="company" id=""/></br>
 	   date <input type="text" name="date" id=""/></br>
-      <button onclick="myFunc(this.form)"> Filter </button>
+      <button onclick="myFunc(this.form)"> Search </button>-->
 	  
 </form>
 <?php

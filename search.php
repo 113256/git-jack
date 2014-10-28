@@ -68,6 +68,17 @@ $fullresult = mysqli_query($conn,$query)  or die("Error: No matches found" ); //
 
 </head>
 <body>
+	  <p>search/d</p>
+<form action = "search.php" method="get" >
+      Name  <input type="text" name="name" id=""/></br>
+      Email <input type="text" name="email" id=""/></br>
+	  Company <input type="text" name="company" id=""/></br>
+	   date <input type="text" name="date" id=""/></br>
+      <button onclick="myFunc(this.form)"> Search </button>
+	  
+</form>
+
+
 <table>
 <tr>
 	<td>name</td>
@@ -87,7 +98,20 @@ $fullresult = mysqli_query($conn,$query)  or die("Error: No matches found" ); //
 
 </table>
 
+<script>
+		function myFunc(frm)
+{
+//this sends all the form names (not id) to the url and the value (not id) should be empty if its "all"
 
+  
+  
+  // set the target to the same page
+  frm.target = '_self';
+  
+  // submit
+  frm.submit();
+}
+	</script>
 </body>
 
 </html>
