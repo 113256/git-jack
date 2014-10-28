@@ -26,7 +26,7 @@
 	  </form>
 
 	  <a href= "search.php">search</a>
-	  <p>search/d</p>
+	  <p>search here </p>
 <!--<form action = "search.php" method="get" >
       Name  <input type="text" name="name" id=""/></br>
       Email <input type="text" name="email" id=""/></br>
